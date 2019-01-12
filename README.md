@@ -81,7 +81,7 @@ The training/test loss/accuracy curves for each dataset's experiments (figures f
 
 <img src="visualization/char-cnn_small_yelp_review.png" width="420"> <img src="visualization/char-cnn_large_yelp_review.png" width="420">
 
-- **yahoo! Answers**
+- **yahoo! answers**
 
 <img src="visualization/char-cnn_small_yahoo_answers.png" width="420"> <img src="visualization/char-cnn_large_yahoo_answers.png" width="420">
 
