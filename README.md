@@ -60,7 +60,7 @@ Maximally, each experiment would be run for 20 epochs. Early stopping was applie
 | yelp_polarity | 91.40(93.47) | 93.50(94.11) |
 |  yelp_review  | 56.09(59.16) | 58.93(60.38) |
 |  yahoo_answer | 65.91(70.16) | 64.93(70.45) |
-| amazon_review |              |              |
-|amazon_polarity|              |              |
+| amazon_review | 56.77(59.47) | 59.01(58.69) |
+|amazon_polarity| 92.54(94.50) | 93.85(94.49) |
 
 You could find detail log of each experiment containing loss, accuracy and confusion matrix at the end of each epoch in **output/datasetname_scale/logs.txt**, for example output/ag_news_small/logs.txt
