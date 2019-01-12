@@ -63,4 +63,40 @@ Maximally, each experiment would be run for 20 epochs. Early stopping was applie
 | amazon_review | 56.77(59.47) | 59.01(58.69) |
 |amazon_polarity| 92.54(94.50) | 93.85(94.49) |
 
+The training/test loss/accuracy curves for each dataset's experiments (figures for small model are on the left side) are shown below:
+
+- **ag_news**
+
+<img src="visualization/char-cnn_small_agnews.png" width="420"> <img src="visualization/char-cnn_large_agnews.png" width="420"> 
+
+- **db_pedia**
+
+<img src="demo/dbpedia_50.png" width="420"> <img src="demo/dbpedia_100.png" width="420"> 
+<img src="demo/dbpedia_200.png" width="420"> <img src="demo/dbpedia_300.png" width="420">
+
+- **yelp_polarity**
+
+<img src="demo/yelpreviewpolarity_50.png" width="420"> <img src="demo/yelpreviewpolarity_100.png" width="420"> 
+<img src="demo/yelpreviewpolarity_200.png" width="420"> <img src="demo/empty.png" width="420">
+
+- **yelp_review**
+
+<img src="demo/yelpreviewfull_50.png" width="420"> <img src="demo/empty.png" width="420"> 
+<img src="demo/empty.png" width="420"> <img src="demo/yelpreviewfull_300.png" width="420">
+
+- **yahoo! Answers**
+
+<img src="demo/yahoo_50.png" width="420"> <img src="demo/yahoo_100.png" width="420"> 
+<img src="demo/yahoo_200.png" width="420"> <img src="demo/yahoo_300.png" width="420">
+
+- **amazon_review**
+
+<img src="demo/amazonreviewfull_50.png" width="420"> <img src="demo/empty.png" width="420"> 
+<img src="demo/amazonreviewfull_200.png" width="420"> <img src="demo/empty.png" width="420">
+
+- **amazon_polarity**
+
+<img src="demo/amazonreviewpolarity_50.png" width="420"> <img src="demo/amazonreviewpolarity_100.png" width="420"> 
+<img src="demo/empty.png" width="420"> <img src="demo/amazonreviewpolarity_50.png" width="420">
+
 You could find detail log of each experiment containing loss, accuracy and confusion matrix at the end of each epoch in **output/datasetname_scale/logs.txt**, for example output/ag_news_small/logs.txt
