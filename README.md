@@ -39,34 +39,28 @@ If you want to train a model with common dataset and your preference parameters,
 If you want to train a model with your own dataset, you need to specify the path to input and output folders:
 - **python train.py -i path/to/input/folder -o path/to/output/folder**
 
-## Test
-
-For testing a trained model with your test file, please run the following command:
-- **python inference.py -i path/to/test/file -p path/to/trained/model -o path/to/output/file**
-
-You could find some trained models I have trained in [link](https://drive.google.com/open?id=1zzC4r0nn8yInWjCbVrVZPFYyOWJQizqh)
+You could find all trained models I have trained in [link](https://drive.google.com/open?id=1zzC4r0nn8yInWjCbVrVZPFYyOWJQizqh)
 
 ## Experiments:
 
 I run experiments in 2 machines, one with NVIDIA TITAN X 12gb GPU and the other with NVIDIA quadro 6000 24gb GPU. For small and large models, you need about 1.6 gb GPU and 3.5 gb GPU respectively.
 
-Results for test set are presented as follows:  A(B)/C/D:
+Results for test set are presented as follows:  A(B):
 - **A** is accuracy reproduced here.
 - **B** is accuracy reported in the paper.
-- **C** is the optimizer used. **S** is SGD with initial learning of 0.01, while **A** is Adam with initial learning rate of 0.001.
-- **D** is the epoch when maximum accuracy observed.
+I used SGD and Adam as optimizer, with different initial learning rate. You could find out specific configuration for each experiment in **output/datasetname_scale/logs.txt**, for example output/ag_news_small/logs.txt
 
-Each experiment is run over 10 epochs.
+Maximally, each experiment would be run for 20 epochs. Early stopping was applied with patience is set to 3 as default.
 
-|      Size     |       Small    |     Large    |
-|:---------------:|:------------------:|:------------------:|
-|    ag_news    | 88.20(84.35)/A/4 | 88.17(87.18)/A/2 |
-|   sogu_news   | 94.95(91.35)/A/9 | 95.48(95.12)/A/6 |
-|    db_pedia   | 97.58(98.02)/A/8 | 97.65(98.27)/A/7 |
-| yelp_polarity |                  | 94.21(94.11)/A/5 |
-|  yelp_review  |                  | 60.55(60.38)/S/5 |
-|  yahoo_answer | 67.55(70.16)/S/9 | 68.87(70.45)/S/4 |
-| amazon_review |                  |                  |
-|amazon_polarity|                  |                  |
+|      Size     |     Small  |     Large    |
+|:---------------:|:--------------:|:--------------:|
+|    ag_news    | 86.71(84.35) | 88.13(87.18) |
+|   sogu_news   | 95.08(91.35) | 94.90(95.12) |
+|    db_pedia   | 97.53(98.02) | 97.60(98.27) |
+| yelp_polarity | 91.40(93.47) | 93.50(94.11) |
+|  yelp_review  | 56.09(59.16) | 58.93(60.38) |
+|  yahoo_answer | 65.91(70.16) | 64.93(70.45) |
+| amazon_review |              |              |
+|amazon_polarity|              |              |
 
 You could find detail log of each experiment containing loss, accuracy and confusion matrix at the end of each epoch in **output/datasetname_scale/logs.txt**, for example output/ag_news_small/logs.txt
