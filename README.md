@@ -69,6 +69,10 @@ The training/test loss/accuracy curves for each dataset's experiments (figures f
 
 <img src="visualization/char-cnn_small_agnews.png" width="420"> <img src="visualization/char-cnn_large_agnews.png" width="420"> 
 
+- **sogou_news**
+
+<img src="visualization/char-cnn_small_sogou_news.png" width="420"> <img src="visualization/char-cnn_large_sogou_news.png" width="420">
+
 - **db_pedia**
 
 <img src="visualization/char-cnn_small_dbpedia.png" width="420"> <img src="visualization/char-cnn_large_dbpedia.png" width="420">
